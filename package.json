@@ -1,0 +1,28 @@
+{
+  "name": "json-utils",
+  "version": "1.0.0",
+  "description": "Json tiny utilities ",
+  "main": "JsonUtils.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jastonitas/json-utils.git"
+  },
+  "keywords": [
+    "json",
+    "json-util",
+    "json-utilities"
+  ],
+  "author": "jastonitas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jastonitas/json-utils/issues"
+  },
+  "homepage": "https://github.com/jastonitas/json-utils#readme"
+}
