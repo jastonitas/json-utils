@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documentación del Proyecto de Datos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            color: #333;
+        }
+        h1, h2 {
+            color: #0055a4; /* Azul oscuro */
+        }
+        h3 {
+            color: #d63333; /* Rojo */
+        }
+        p, li {
+            color: #333; /* Gris oscuro */
+        }
+        .box {
+            border: 1px dotted #0055a4; /* Borde azul */
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .highlight {
+            background-color: #d63333; /* Fondo rojo */
+            color: white; /* Texto blanco */
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #expandibleContent {
+            display: none;
+            overflow: hidden;
+        }
+
+         .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .data-table, .data-table th, .data-table td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        .data-table th, .data-table td {
+            padding: 10px;
+        }
+        .data-table th {
+            background-color: #0055a4;
+            color: white;
+        }
+        .data-table tr:nth-child(even) {background-color: #f2f2f2;}
+        .origin, .staging, .enterprise {
+            font-weight: bold;
+        }
+        .line-to-right {
+            border-right: 2px solid red;
+        }
+        .line-to-left {
+            border-left: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="myFunction()">Haz clic para expandir</div>
+    <div id="expandibleContent" style="display:none;">
+        <p>Este es el contenido expandible. Haz clic en el botón para mostrar u ocultar este contenido.</p>
+    </div>
+    <div class="container">
+        <h1>Título del Proyecto</h1>
+        <div class="box">
+            <h2>Resumen del Proyecto</h2>
+            <h3>Breve descripción del proyecto</h3>
+            <p>Descripción detallada del proyecto, incluyendo la motivación y el contexto en el que se desarrolla.</p>
+            <h3>Objetivos y resultados esperados</h3>
+            <p>Explicación de los objetivos del proyecto y qué resultados se esperan alcanzar una vez completado.</p>
+        </div>
+        <div class="box">
+            <h2>Flujo de Datos</h2>
+            <p>Descripción del flujo de datos dentro del proyecto, incluyendo las fuentes de datos, procesamiento y almacenamiento.</p>
+        </div>
+        <div class="box">
+            <h2>Diagrama de Infraestructura</h2>
+            <p>Aquí puedes insertar un diagrama visual de la infraestructura del proyecto. Aunque HTML no permite cargar imágenes directamente en Confluence, puedes subir la imagen a un espacio de Confluence y enlazarla aquí o insertarla como un objeto embebido.</p>
+        </div>
+        <div class="box">
+            <h2>Continuidad y Mantenimiento</h2>
+            <p>Información sobre cómo se planea asegurar la continuidad del proyecto y las prácticas de mantenimiento para garantizar su operatividad a largo plazo.</p>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var content = document.getElementById("expandibleContent");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+    <!-- ... -->
+    <table class="data-table">
+        <tr>
+            <th>Orígenes de Datos</th>
+            <th>Zona Staging</th>
+            <th>Zona Enterprise</th>
+        </tr>
+        <tr>
+            <td class="origin line-to-right">Tabla Origen 1</td>
+            <td class="staging line-to-left line-to-right">Tabla Staging 1</td>
+            <td class="enterprise line-to-left">Tabla Enterprise 1</td>
+        </tr>
+        <!-- Repite el siguiente bloque para cada fila necesaria -->
+        <tr>
+            <td class="origin line-to-right">Tabla Origen 2</td>
+            <td class="staging line-to-left line-to-right">Tabla Staging 2</td>
+            <td class="enterprise line-to-left">Tabla Enterprise 2</td>
+        </tr>
+        <!-- ... -->
+    </table>
+</body>
+</html>
